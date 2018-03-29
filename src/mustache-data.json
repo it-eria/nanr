@@ -1,0 +1,79 @@
+{
+    "services-slides": [
+        {
+            "img-src-1": "assets/img/service-slide-1-front.jpg",
+            "img-src-2": "assets/img/service-slide-1-back.jpg"
+        },
+        {
+            "img-src-1": "assets/img/service-slide-1-front.jpg",
+            "img-src-2": "assets/img/service-slide-1-back.jpg"
+        }
+    ],
+    "team-slides": [
+        {
+            "photo-name": "team-slide-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "team-slide-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "team-slide-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "team-slide-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "team-slide-5",
+            "delay": "600"
+        },
+        {
+            "photo-name": "team-slide-3"
+        }
+    ],
+    "product-slides": [
+        {
+            "photo-name": "product-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "product-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "product-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "product-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "product-1"
+        }
+    ],
+    "partner-slides": [
+        {
+            "photo-name": "partner-1",
+            "delay": "200"
+        },
+        {
+            "photo-name": "partner-2",
+            "delay": "300"
+        },
+        {
+            "photo-name": "partner-3",
+            "delay": "400"
+        },
+        {
+            "photo-name": "partner-4",
+            "delay": "500"
+        },
+        {
+            "photo-name": "partner-1"
+        }
+    ]
+}

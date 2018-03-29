@@ -1,0 +1,24 @@
+{
+  "src": {
+    "html": "src/",
+    "scss": "src/scss/",
+    "js": "src/js/",
+    "img": "src/img/",
+    "fonts": "src/fonts/"
+  },
+  "build": {
+    "html": "build/",
+    "css": "build/assets/css/",
+    "js": "build/assets/js/",
+    "img": "build/assets/img/",
+    "fonts": "build/assets/fonts/"
+  },
+  "watch": {
+    "mustache": "src/**/*.mustache",
+    "dataFile": "src/mustache-data.json",
+    "scss": "src/scss/**/*.scss",
+    "js": "src/js/**/*.js",
+    "img": "src/img/*.*",
+    "fonts": "src/fonts/*.*"
+  }
+}

@@ -1,0 +1,28 @@
+body, html {
+    min-width: 320px;
+    * {
+        outline: none;
+    }
+    &.no-scroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
+
+a {
+    &:hover {
+        text-decoration: none;
+        color: currentColor;
+    }
+}
+
+p {
+    margin: 0;
+    padding: 0;
+    @include font(300, false);
+    font-size: 16px;
+    color: $text-dark;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
+}

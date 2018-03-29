@@ -1,0 +1,14 @@
+// Text colors
+$text-white: #ffffff;
+$text-dark: #1d2126;
+
+$active: #ff8a4d;
+
+// Mixins
+@mixin font($value, $italic) {
+    @if $italic {
+        font-family: "MuseoSansCyrl-#{$value}Italic", sans-serif;
+    } @else {
+        font-family: "MuseoSansCyrl-#{$value}", sans-serif;
+    }
+}
