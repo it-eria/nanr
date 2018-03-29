@@ -521,6 +521,28 @@
             background-position: 0% 50%;
         }
     }
+    &-up {
+        display: block;
+        width: 50px;
+        height: 50px;
+        border: 2px solid $active;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        background: url(../img/arr-up.svg) 50% 50%, url(../img/arr-up.svg) 50% 200%;
+        background-size: 16px auto;
+        background-repeat: no-repeat;
+        transition: all .3s ease-in-out;
+        &:hover {
+            background: url(../img/arr-up.svg) 50% -200%, url(../img/arr-up.svg) 50% 50%;
+            background-size: 16px auto;
+            background-repeat: no-repeat;
+        }
+        @media screen and (max-width: 768px) {
+            position: relative;
+            margin: 30px auto 0;
+        }
+    }
 }
 
 .flag {
@@ -1107,6 +1129,12 @@
             padding-left: 10px;
         }
     }
+    p {
+        margin: 20px 0;
+        @media screen and (max-width: 768px) {
+            margin: 10px 0;
+        }
+    }
 }
 
 .publications-filter {
@@ -1144,5 +1172,30 @@
                 margin-bottom: 10px;
             }
         }
+    }
+}
+
+.about-publication {
+    h2 {
+        @include font(900, false);
+        font-size: 30px;
+        @media screen and (max-width: 768px) {
+            font-size: 24px;
+        }
+    }
+    h3 {
+        @include font(900, false);
+        font-size: 18px;
+    }
+    hr {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: $active;
+        margin: 30px 0;
+    }
+    a {
+        color: $active;
+        text-decoration: underline;
     }
 }
