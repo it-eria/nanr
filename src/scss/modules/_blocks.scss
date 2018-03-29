@@ -1350,9 +1350,9 @@
         }
     }
     position: relative;
-    top: -50%;
+    transform: translate(0, -50%);
     @media screen and (max-width: 992px) {
-        top: 0;
+        transform: translate(0, 0);
         margin-bottom: 30px;
     }
     .links {
@@ -1370,7 +1370,7 @@
                 text-decoration: none;
             }
         }
-        @media screen and (max-width: 992px) {
+        @media screen and (max-width: 1199px) {
             text-align: center;
             a {
                 display: block;
