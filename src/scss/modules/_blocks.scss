@@ -1031,8 +1031,23 @@
             font-size: 16px;
             color: #006AC8;
             transition: all .3s ease-in-out;
+            position: relative;
+            &:after {
+                content: '';
+                display: block;
+                width: 0;
+                height: 2px;
+                background-color: $active;
+                transition: all .3s ease-in-out;
+                position: absolute;
+                bottom: -10px;
+                left: -10px;
+            }
             &:hover {
-                color: $text-dark;
+                color: $active;
+                &:after {
+                    width: 36px;
+                }
             }
         }
     }
@@ -1090,6 +1105,44 @@
         margin: 16px 0;
         li {
             padding-left: 10px;
+        }
+    }
+}
+
+.publications-filter {
+    background-color: #fff;
+    padding: 19px 0 9px;
+    ul {
+        list-style: none;
+        font-size: 0;
+        li {
+            display: inline-block;
+            margin-right: 47px;
+            vertical-align: top;
+            &:last-child {
+                margin-right: 0;
+            }
+            a {
+                display: block;
+                @include font(900, false);
+                color: #006AC8;
+                font-size: 12px;
+                line-height: 14px;
+                transition: all .3s ease-in-out;
+                &.active, &:hover {
+                    color: $active;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                display: block;
+                margin-bottom: 10px;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @media screen and (max-width: 1199px) {
+                margin-bottom: 10px;
+            }
         }
     }
 }
