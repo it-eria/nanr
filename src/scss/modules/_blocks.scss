@@ -5,6 +5,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50% 50%;
+    color: #fff;
+    p {
+        color: #fff;
+    }
 }
 
 .first-screen-content {
@@ -1041,6 +1045,9 @@
 }
 
 .footer {
+    b, strong {
+        display: block;
+    }
     .main-nav {
         ul {
             li {
@@ -1073,5 +1080,16 @@
     }
     .flag {
         margin-right: 2px;
+    }
+}
+
+.text-block {
+    ul {
+        list-style: disc;
+        padding: 0 0 0 30px;
+        margin: 16px 0;
+        li {
+            padding-left: 10px;
+        }
     }
 }

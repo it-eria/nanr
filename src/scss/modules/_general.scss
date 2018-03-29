@@ -9,6 +9,10 @@ body, html {
     }
 }
 
+b, strong {
+    @include font(900, false);
+}
+
 a {
     &:hover {
         text-decoration: none;
