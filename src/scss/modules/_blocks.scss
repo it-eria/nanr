@@ -98,6 +98,10 @@
         }
         &:focus {
             width: 200px;
+            border-color: $active;
+            & + button[type="submit"] {
+                border-color: $active;
+            }
         }
     }    
     button[type="submit"] {
@@ -115,6 +119,7 @@
         background-position: 50% 50%;
         background-size: 14px auto;
         cursor: pointer;
+        transition: all .3s ease-in-out;
         &:before {
             content: '\00a0';
             @include font(900, false);
@@ -1270,6 +1275,12 @@
             background-repeat: no-repeat;
             background-size: 80% auto;
             cursor: pointer;
+            transition: all .3s ease-in-out;
+        }
+        &:hover {
+            &:before {
+                border-color: $active;
+            }
         }
     }
     p {
@@ -1533,9 +1544,71 @@
         width: 36px;
         height: 2px;
         background-color: $active;
-        margin: 30px 0;
+        margin: 30px auto;
         @media screen and (max-width: 768px) {
-            margin: 15px 0;
+            margin: 15px auto;
         }
+    }
+}
+
+.preloader {
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    background-color: #006AC8;
+    background-image: url(../img/back.png);
+    background-repeat: no-repeat;
+    background-size: 180% auto;
+    background-position: 50% 50%;
+    width: 100%;
+    animation: preloader 1.5s ease-in-out 3.5s 1 forwards;
+    padding-top: 18px;
+    span {
+        display: block;
+        width: 0;
+        height: 2px;
+        background-color: $active;
+        position: absolute;
+        top: 0;
+        left: 0;
+        animation: preloaderLine 3s ease-in-out 1 forwards;
+    }
+    img {
+        display: block;
+        max-width: 100px;
+        height: auto;
+        position: absolute;
+        top: calc(50% - 50px);
+        left: calc(50% - 60px);
+    }
+    .icon-container {
+        min-height: 100vh;
+    }
+}
+
+@keyframes preloaderLine {
+    0% {
+        width: 0;
+    }
+    40% {
+        width: 40%;
+    }
+    60% {
+        width: 60%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes preloader {
+    0% {
+        background-size: 180% auto;
+        background-position: 50% 50%;
+    }
+    100% {
+        background-size: 110% auto;
+        background-position: 50% 50%;
     }
 }

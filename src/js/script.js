@@ -9,6 +9,11 @@ $(function() {
     var windowScrollTop = $(window).scrollTop();
     var diff = -100;
 
+    var offsetXLogo = $('.header .logo').position().left;
+    var offsetYLogo = $('.header .logo').position().top + 28;
+
+    preloader();
+
     if($('.people-teaser').length > 0) {
         $(window).resize(function() {
             windowHeight = $(this).innerHeight();
@@ -113,4 +118,19 @@ $(function() {
             scrollTop:0
         }, '500');
     });
+
+    function preloader() {
+        if($('.preloader').length > 0) {
+            setTimeout(function() {
+                $('.preloader img').animate({
+                    "top": 0,
+                    "left": 0,
+                    "max-width": 37
+                }, 1500, function() {
+                    $('.preloader').fadeOut(500);
+                    $('body').removeClass('no-scroll');
+                });
+            }, 5000);
+        }
+    }
 });
