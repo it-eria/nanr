@@ -9,6 +9,9 @@
     p {
         color: #fff;
     }
+    &-thanks {
+        min-height: 100vh;
+    }
 }
 
 .first-screen-content {
@@ -1513,6 +1516,26 @@
                 display: block;
                 margin: 15px auto;
             }
+        }
+    }
+}
+
+.thanks-block {
+    h2 {
+        @include font(900, false);
+        font-size: 36px;
+        @media screen and (max-width: 768px) {
+            font-size: 28px;
+        }
+    }
+    hr {
+        display: block;
+        width: 36px;
+        height: 2px;
+        background-color: $active;
+        margin: 30px 0;
+        @media screen and (max-width: 768px) {
+            margin: 15px 0;
         }
     }
 }
